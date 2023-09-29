@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const FilterComponent = ({ onStockFilterChange, onPriceFilterChange } : { onStockFilterChange: any, onPriceFilterChange: any }) => {
-  const [stockFilter, setStockFilter] = useState('all');
-  const [priceFilter, setPriceFilter] = useState('');
+  const [, setStockFilter] = useState('all');
+  const [, setPriceFilter] = useState('');
 
   const handleStockFilterChange = (event: any) => {
     const filter = event.target.value;

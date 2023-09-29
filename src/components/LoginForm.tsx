@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 export type validFormData = {
     valid: boolean,
     data: FormData

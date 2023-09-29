@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 import Login from './pages/Login';
 
 export default function App() {
-  const [user, setUser] = useAtom(userAtom)
+  const [, setUser] = useAtom(userAtom)
 
   async function checkAuth() {
     if (!isTokenAvailable()) return
