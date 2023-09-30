@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { ProductList } from "../types/product";
 
 export default function SearchButtonProductList({products} : {products: ProductList}){
