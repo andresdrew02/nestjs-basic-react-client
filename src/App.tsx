@@ -8,6 +8,7 @@ import { userAtom } from './store/store';
 import { useAtom } from 'jotai'
 import { useEffect } from 'react'
 import Login from './pages/Login';
+import Product from './pages/DetailedProduct';
 
 export default function App() {
   const [, setUser] = useAtom(userAtom)
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/info" element={<Info/>} />
         <Route path="/logout" element={<Logout/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/product/:id" element={<Product/>} />
       </Routes>
     </BrowserRouter>
   )
