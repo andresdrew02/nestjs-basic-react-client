@@ -31,6 +31,7 @@ export default function SearchButton(){
         <div className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-72">
             <Searchbar callback={searchBarHandler}/>
             <SearchButtonProductList products={products}/>
+            {products.length > 0 && <button className="btn btn-ghost" onClick={() => setProducts([])}>Limpiar</button>}
         </div>
       </div>
     )
