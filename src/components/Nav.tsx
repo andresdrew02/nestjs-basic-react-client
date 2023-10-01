@@ -65,9 +65,14 @@ export default function Nav({ user }: { user: User }) {
       </div>
       <div className="navbar-end">
         {!user ? (
+          <>
           <Link to="/login" className="btn btn-ghost">
             Login
           </Link>
+          <Link to="/register" className="btn btn-ghost">
+            Register
+          </Link>
+          </>
         ) : (
           <p className="select-none mr-2">{user.name}</p>
         )}
