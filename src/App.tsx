@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Product from './pages/DetailedProduct';
 import Carrito from './pages/Carrito';
 import MyOrders from './pages/MyOrders';
+import Register from './pages/Register';
 
 export default function App() {
   const [, setUser] = useAtom(userAtom)
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/info" element={<Info/>} />
         <Route path="/logout" element={<Logout/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>}/>
         <Route path="/product/:id" element={<Product/>} />
         <Route path="/carrito" element={<Carrito/>} />
         <Route path="/orders" element={<MyOrders/>}></Route>

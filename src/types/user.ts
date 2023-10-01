@@ -10,3 +10,10 @@ export type UserProfileResponse = {
     email: string
     iat: number
 }
+
+export type RegisterData = {
+    username: string | undefined
+    email: string | undefined
+    password: string | undefined 
+    passwordConfirmation: string | undefined
+}
