@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { isTokenValid } from "../lib/Auth";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import {
-    Carrito,
   NormalizedCarrito,
   getTotal,
   normalizeCarrito,
