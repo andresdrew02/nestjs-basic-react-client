@@ -39,7 +39,7 @@ export default function Nav({ user }: { user: User }) {
               <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <Link to="/info">Info</Link>
+              <a href="https://github.com/andresdrew02/nestjs-basic-react-client" target="_blank">Info</a>
             </li>
             <li>
               <a
