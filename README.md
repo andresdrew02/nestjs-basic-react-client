@@ -42,10 +42,6 @@ cd nestjs-basic-react-client
 npm install
 ```
 
-## Configuración
-
-1. Abre el archivo de configuración en el cliente (por ejemplo, `src/config.js`) y asegúrate de que la URL de la API apunte a la ubicación de tu API Rest de NestJS.
-
 ## Uso
 
 1. Inicia la aplicación:
