@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 import Login from './pages/Login';
 import Product from './pages/DetailedProduct';
 import Carrito from './pages/Carrito';
+import MyOrders from './pages/MyOrders';
 
 export default function App() {
   const [, setUser] = useAtom(userAtom)
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/product/:id" element={<Product/>} />
         <Route path="/carrito" element={<Carrito/>} />
+        <Route path="/orders" element={<MyOrders/>}></Route>
       </Routes>
     </BrowserRouter>
   )

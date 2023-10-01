@@ -71,6 +71,7 @@ export default function Nav({ user }: { user: User }) {
         ) : (
           <p className="select-none mr-2">{user.name}</p>
         )}
+        {user && <Link to="/orders" className="btn btn-ghost">Mis pedidos</Link>}
         <SearchButton />
         <Link to="/carrito">
           <button className="btn btn-ghost btn-circle">
