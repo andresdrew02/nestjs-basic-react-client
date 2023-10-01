@@ -1,6 +1,9 @@
 import { ProductFilters } from "../pages/Tienda";
+import { NormalizedCarrito } from "../types/carrito";
 import { Error } from "../types/error";
+import { Order, OrderItem } from "../types/order";
 import { Product, ProductList } from "../types/product";
+import { getToken } from "./Auth";
 
 export async function getProducts(filters: ProductFilters = {}, query?: string): Promise<ProductList>{
     let queryString = ''
@@ -26,4 +29,29 @@ export async function getProducts(filters: ProductFilters = {}, query?: string):
 
 export async function getProductById(id: number): Promise<Product | Error>{
     return (await fetch(`http://localhost:3000/api/products/${id}`)).json()
+}
+
+export async function saveOrder(normalizedCarrito: NormalizedCarrito){
+    const orderItems: OrderItem[] = []
+    normalizedCarrito.forEach(product => {
+        orderItems.push({
+            productId: product.id,
+            quantity: product.quantity
+        })
+    })
+
+    const order: Order = {
+        orderItems: orderItems
+    }
+
+    const response = await fetch('http://localhost:3000/api/orders', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${getToken()}`
+        },
+        body: JSON.stringify(order)
+    })
+    
+    return response.status
 }
