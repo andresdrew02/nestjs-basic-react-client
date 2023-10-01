@@ -62,11 +62,9 @@ La estructura del proyecto del cliente puede incluir las siguientes carpetas y a
 
 - `src/components`: Componentes reutilizables de React.
 - `src/pages`: Componentes de páginas de la aplicación.
-- `src/routes`: Configuración de rutas utilizando `react-router-dom`.
 - `src/store`: Configuración de estado global utilizando "Jotai".
-- `src/utils`: Utilidades y funciones de ayuda.
-- `src/App.js`: Punto de entrada de la aplicación.
-- `src/config.js`: Configuración de la API.
+- `src/lib`: Utilidades y funciones de ayuda.
+- `src/App.tsx`: Punto de entrada de la aplicación.
 - `public`: Archivos estáticos, como imágenes y favicon.
 
 ## Contribución
