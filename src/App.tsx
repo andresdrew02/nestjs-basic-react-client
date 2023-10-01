@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home";
 import Tienda from './pages/Tienda';
-import Info from './pages/Info';
 import Logout from './pages/Logout';
 import { isTokenAvailable, isTokenValid, getProfile } from './lib/Auth';
 import { userAtom } from './store/store';
@@ -33,7 +32,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Tienda/>} />
-        <Route path="/info" element={<Info/>} />
         <Route path="/logout" element={<Logout/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>}/>
