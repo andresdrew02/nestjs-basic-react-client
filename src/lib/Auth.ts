@@ -23,6 +23,10 @@ export function saveToken(token: string){
     localStorage.setItem('token', token)
 }
 
+export function getToken(){
+    return localStorage.getItem('token')
+}
+
 export async function getProfile(): Promise<User>{
     const token = localStorage.getItem('token')
 
