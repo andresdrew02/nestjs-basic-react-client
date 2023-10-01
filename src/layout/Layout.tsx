@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { User } from "../types/user";
 
@@ -8,6 +9,7 @@ export default function Layout({children, user}: {children: React.ReactNode, use
         <div className="min-h-screen">
             {children}
         </div>
+        <Footer/>
         </>
     )
 
