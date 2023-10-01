@@ -1,5 +1,6 @@
 import { validFormData } from "../components/LoginForm"
-import { User } from "../types/user"
+import { UserOrders } from "../types/order"
+import { RegisterData, User } from "../types/user"
 import { UserProfileResponse } from "../types/user"
 
 export function isTokenAvailable(){
@@ -46,6 +47,17 @@ export async function getProfile(): Promise<User>{
     }
 }
 
+export async function register(registerData: RegisterData){
+    const response = await fetch('http://localhost:3000/api/auth/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(registerData)
+    })
+    return await response.json()
+}
+
 export async function login(userData: validFormData) {
     const response = await fetch('http://localhost:3000/api/auth/login', {
         method: 'POST',
@@ -62,4 +74,16 @@ export async function login(userData: validFormData) {
 
 export function logout(){
     localStorage.removeItem('token')
+}
+
+export async function getUserOrders(): Promise<UserOrders>{
+    const token = getToken()
+    if (!token) return []
+    const response = await fetch('http://localhost:3000/api/orders', {
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": 'application/json'
+        }
+    })
+    return await response.json()
 }
